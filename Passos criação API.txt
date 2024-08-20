@@ -1,0 +1,30 @@
+Criar Models
+Usuario
+Tarefas
+
+Controller
+	Criar Interface
+	Criar Controller - Onde fica a config do CRUD - Get, Put, Post, Delet
+
+Criar Pasta Repositorios
+
+Criar Pasta Data
+	(Onde ficara as conexões com o BD)
+
+Instalar EF
+	EFCore
+	EFCoreDesign
+	EFCoreSqlServer
+	EFTools
+
+Criar Context
+
+Na pasta Repositorios
+	Criar pasta Interfaces
+		Criar interface para o repositório
+	Criar repositorio (builder.Services.AddEntityFrameworkSQLServer().AddDbContext<...>(...);
+
+Em appsettings.json criar o ConnectionString 
+fazer a injeção de dependência. Iterface-Repositorio (builder.Services.AddScoped<...,...>
+
+O tipo ActionResult é a classe base para todos os resultados da ação no ASP.NET Core.

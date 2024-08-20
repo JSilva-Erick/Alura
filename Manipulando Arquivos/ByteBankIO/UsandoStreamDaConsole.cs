@@ -1,0 +1,19 @@
+﻿partial class Program
+{
+    static void UsandoStreamDaConsole()
+    {
+        using (var fluxoDeEntrada = Console.OpenStandardInput())
+        using (var fs = new FileStream("lidosConsole.txt", FileMode.Create))
+        {
+            var buffer = new byte[1024];
+
+            while (true)
+            {
+                var byteslidos = fluxoDeEntrada.Read(buffer, 0, 1024);
+                fs.Write(buffer, 0, byteslidos);
+                fs.Flush();
+                Console.WriteLine($"Bytes lidos na console: {byteslidos}");
+            }
+        }
+    }
+}
